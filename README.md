@@ -26,14 +26,14 @@ PRIVATE_KEY=cuzdan_ozel_anahtariniz
 MONGO_URI=mongodb_atlas_baglanti_linkiniz
 ```
 
-##🚀 Kullanım
+## 🚀 Kullanım
 Ortam hazırlıkları ve konfigürasyon tamamlandığında, aşağıdaki komutu çalıştırarak akıllı sözleşme işlemlerini ağa gönderebilir ve verilerin bulut veritabanına indekslenmesini canlı olarak izleyebilirsiniz:
 
 ```bash
 python ana_uygulama.py
 ```
 
-##🔧 Sorun Giderme (Troubleshooting)
+## 🔧 Sorun Giderme (Troubleshooting)
 SignedTransaction Hatası: SignedTransaction nesnesindeki güncel kütüphane sürümü kaynaklı rawTransaction hatası, ilgili kod bloğunun signed_txn.rawTransaction veya signed_txn.raw_transaction şeklinde revize edilmesiyle çözülmüştür.
 
 Depo Temizliği: Hassas verilerin sızmasını önlemek adına venv/, .env ve __pycache__/ gibi klasörler .gitignore dosyası ile deponun dışında tutulmuştur.
