@@ -1,0 +1,18 @@
+# Güvenlik ve Çevre Değişkenleri
+.env
+
+# Sanal Ortam (Virtual Environment)
+venv/
+env/
+.venv/
+
+# Python Önbellek Dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# İşletim Sistemi ve IDE Dosyaları
+.DS_Store
+.vscode/
+.idea/
