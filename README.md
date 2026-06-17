@@ -1,15 +1,17 @@
-# ⛓️ Hibrit Blok Zinciri ve Bulut Veritabanı Projesi
+# ⛓️ Hibrit Blok Zinciri ve Bulut Veritabanı Entegrasyonu
 
-Bu proje, Ethereum Sepolia ağı, Alchemy RPC ve MongoDB Atlas kullanılarak yüksek erişilebilirlik prensipleriyle geliştirilmiş merkeziyetsiz bir veri yönetim sistemidir. 
+Bu proje; Ethereum Sepolia test ağı, Alchemy bulut altyapısı ve MongoDB Atlas kullanılarak geliştirilmiş kapsamlı bir hibrit blok zinciri uygulamasıdır. Proje, akıllı sözleşmeler aracılığıyla blok zincirinin güvenliğini sağlarken, işlem verilerini (hash, tarih, meta veriler) hızlı sorgulanabilir ve indekslenebilir bir şekilde bulut veritabanında saklamayı amaçlar.
 
-## 🚀 Teknolojiler ve 🏗️ Mimari
-Remix IDE üzerinden derlenip Sepolia ağına dağıtılan Solidity tabanlı akıllı sözleşmeler, Web3.py kütüphanesi ve Python kullanılarak yönetilmektedir. 
+## 🚀 Teknolojiler ve Mimari
 
-## ☁️ Bulut Altyapısı (Alchemy & RPC)
-Yerel düğümler yerine Alchemy bulut altyapısı tercih edilerek ağa kesintisiz erişim sağlanmış ve işlemler özel anahtarlarla güvenli bir şekilde imzalanmıştır. 
+* **Blockchain Ağı:** Ethereum Sepolia TestNet (Akıllı sözleşmeler Solidity ve Remix IDE ile yazılıp dağıtılmıştır).
+* **Bulut Altyapısı (RPC):** Alchemy (Uygulamanın yerel bir bilgisayar bağımlılığı olmaksızın ağla 7/24 kesintisiz iletişim kurmasını sağlar).
+* **Bulut Veritabanı:** MongoDB Atlas (Blok zinciri üzerindeki işlemlerin hızlı sorgulanabilir bir kopyasını tutar).
+* **Köprü Yazılımı:** Python ve Web3.py (Blok zinciri ile veritabanı arasında köprü görevi görerek işlemleri `PRIVATE_KEY` ile imzalar).
 
-## 💾 Veri Yönetimi (MongoDB Atlas)
-Blok zinciri üzerindeki yavaş okuma sürelerini aşmak için, başarılı her işlemin benzersiz hash değeri ve meta bilgileri anlık olarak MongoDB Atlas bulut veritabanına indekslenmektedir. 
+## 🛠️ Kurulum ve Bağımlılıklar
 
-## 🛠️ Sorun Giderme ve Optimizasyon
-Geliştirme sürecinde karşılaşılan işlem imzalama hataları ve yerel ağ senkronizasyon problemleri, güncel Web3 kütüphanesi metotları entegre edilerek başarıyla çözülmüştür.
+Projeyi yerel bilgisayarınıza klonladıktan sonra terminal üzerinden aşağıdaki komutu çalıştırarak Web3 ve PyMongo gibi gerekli tüm bağımlılıkları sisteminize kurmalısınız:
+
+```bash
+pip install -r requirements.txt
