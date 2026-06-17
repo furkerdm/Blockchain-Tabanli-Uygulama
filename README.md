@@ -17,7 +17,7 @@ Projeyi yerel bilgisayarınıza klonladıktan sonra terminal üzerinden aşağı
 pip install -r requirements.txt
 ```
 
-##⚙️ Konfigürasyon (.env)
+## ⚙️ Konfigürasyon (.env)
 Uygulamanın ağa bağlanabilmesi için ana dizinde bir .env dosyası oluşturarak içerisine gerekli gizli değişkenleri güvenli bir şekilde tanımlamanız gerekmektedir. Projenin güvenliği için bu dosya kesinlikle GitHub'a yüklenmemelidir.
 
 ```Ini, TOML
